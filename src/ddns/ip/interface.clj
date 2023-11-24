@@ -1,4 +1,4 @@
-(ns ip
+(ns ddns.ip.interface
   (:require
    [cheshire.core :as json]
    [hato.client :as hc]))

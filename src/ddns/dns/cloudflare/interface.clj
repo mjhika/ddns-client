@@ -1,6 +1,6 @@
-(ns cloudflare
+(ns ddns.dns.cloudflare.interface
   (:require
-   [ip :as ip]
+   [ddns.ip.interface :as ip]
    [cheshire.core :as json]
    [hato.client :as hc]))
 
