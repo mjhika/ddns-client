@@ -1,0 +1,3 @@
+{:auth-username #env ACDC_USERNAME
+ :api-token #env ACDC_API_TOKEN
+ :ddns-record #env ACDC_DDNS_RECORD}
