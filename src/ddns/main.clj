@@ -1,9 +1,10 @@
 (ns ddns.main
   (:gen-class)
   (:require
-   [ddns.system :as d.sys]))
+   [ddns.system :as system]
+   [ddns.system.dispatch :as dispatch]))
 
 (set! *warn-on-reflection* true)
 
-(comment
-  @d.sys/config)
+(defn -main [& _]
+  (dispatch/dispatch-system @system/system-config))
