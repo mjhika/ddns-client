@@ -7,4 +7,5 @@
 (set! *warn-on-reflection* true)
 
 (defn -main [& _]
-  (dispatch/dispatch-system @system/system-config))
+  (let [_ (dispatch/dispatch-system @system/system-config)]
+    (println "System running...")))

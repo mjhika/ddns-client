@@ -12,7 +12,8 @@
 (defmethod dispatch-system :default
   [conf]
   (schedule #(when (cloudflare/update-record? conf)
-               (cloudflare/update-record conf))
+               (cloudflare/update-record conf)
+               (println "Record updated..."))
             300000))
 
 (comment
