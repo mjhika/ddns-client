@@ -3,4 +3,5 @@
         cheshire/cheshire {:mvn/version "5.12.0"}
         dnsjava/dnsjava {:mvn/version "3.5.3"}
         hato/hato {:mvn/version "0.9.0"}
+        org.clojure/clojure {:mvn/version "1.11.1"}
         org.clojure/core.async {:mvn/version "1.6.681"}}}
