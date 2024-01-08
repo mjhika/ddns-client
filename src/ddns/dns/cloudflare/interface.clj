@@ -1,7 +1,6 @@
 (ns ddns.dns.cloudflare.interface
   (:require
-   [ddns.dns.cloudflare.impl :as cf.impl]
-   [ddns.system :as d.sys]))
+   [ddns.dns.cloudflare.impl :as cf.impl]))
 
 (defn update-record
   "Given a conf, the function will update the value of the DNS record with the
@@ -31,6 +30,8 @@
   (cf.impl/update-record? conf))
 
 (comment
+  (require '[ddns.system :as d.sys])
+
   (update-record @d.sys/system-config)
 
   (update-record? @d.sys/system-config))
