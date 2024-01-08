@@ -14,8 +14,8 @@
   {:headers {"X-Auth-Email" email}
    :oauth-token token})
 
-(defn- get-zone [{:keys [api-token auth-username ddns-record]}]
-  (let [domain (util/get-domain-name ddns-record)]
+(defn- get-zone [{:keys [api-token auth-username ddns-record domain-name]}]
+  (let [domain (or domain-name (util/get-domain-name ddns-record))]
     (-> (hc/get (format "%s/zones" cloudflare-v4-base-url)
                 (assoc (request-auth-map api-token auth-username)
                        :as :json

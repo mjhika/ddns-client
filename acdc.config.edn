@@ -1,3 +1,7 @@
 {:auth-username #env ACDC_USERNAME
  :api-token #env ACDC_API_TOKEN
+ ;; :domain-name #env ACDC_DDNS_DOMAIN ;; the implementation assumes a simple
+                                       ;; tld (i.e. .com, .org) if your tld is
+                                       ;; complicated (i.e. .co.uk, .co.jp) then
+                                       ;; use this key
  :ddns-record #env ACDC_DDNS_RECORD}
