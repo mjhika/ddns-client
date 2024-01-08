@@ -1,15 +1,27 @@
-# ddns-client
+# ACDC
 
-I am making ddns-client because I needed a DDNS client that I trusted. The ones that I do trust are either too much of a hassle to setup on all platforms or used the old API global key for Cloudflare.
+A clojure DDNS client? A Cloudflare DDNS client?
 
-There are other projects, that I am certain are great or better than this one, but I also wanted to make my own as an expiriment.
+# Description
 
-The project currently has no release as I am still developing the mvp feature set.
+ACDC was made because I wanted a dynamic DNS client that worked with the latest Cloudflare API and was written Clojure.
+
+Right now only Cloudflare is supported. I would not mind supporting more DDNS providers, but until I use them I won't be adding support myself. Of course if someone wanted it I would be willing to accept a PR.
+
+ACDC is functional at the moment, but I don't consider it production ready until I can get some logging and better error handling. ACDC assumes a lot of connection attempts will succeed and has no means of correcting and not failing.
+
+# Build
+
+```shell
+clj -T:build uber
+```
 
 # Usage
 
-TODO
+```shell
+# run the clojure files
+clj -M -m ddns.main
 
-# Install
-
-TODO
+# or run the jar
+./acdc-<x.x.x>-standalone.jar
+```
