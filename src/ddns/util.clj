@@ -12,5 +12,5 @@
 
 (defn new-formatted-dt []
   (let [d (Date.)
-        sf (SimpleDateFormat. "yy/MM/dd HH:mm")]
+        sf (SimpleDateFormat. "yyyy/MM/dd HH:mm")]
     (.format sf d)))
